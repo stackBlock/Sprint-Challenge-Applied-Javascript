@@ -28,28 +28,31 @@ class TabLink {
     });
 
 
-
-
-    /* ******************************************************** 77
-
     // Add a click event that invokes this.selectTab
     this.tabElement.addEventListener(`click`, () => this.selectTab());
 
-************************************************************** 77 */
+
 
   }
 
-  /* ********************************************************* 66
+  
 
   selectTab(){
 
+    
+
     // Select all elements with the .tab class on them
     const tabs = document.querySelectorAll(`.tab`);
+
+    
     
     // Iterate through the NodeList removing the .active-tab class from each element
     tabs.forEach(function(tab) {
       tab.classList.remove(`active-tab`);
+
     });
+
+/* ********************************************************* 66
 
     // Select all of the elements with the .card class on them
     const cards = document.querySelectorAll(`.card`);
@@ -62,9 +65,11 @@ class TabLink {
   
     // Notice we are looping through the this.cards array and invoking selectCard() from the TabCard class. Just un-comment the code and study what is happening here.
     this.cards.forEach(card => card.selectCard());
+
+    ***************************************************************** 66 */
   }
 
-***************************************************************** 66 */
+
 
 }
 
@@ -76,10 +81,13 @@ class TabCard {
   constructor(cardElement){
     // Assign this.cardElement to the cardElement DOM reference
     this.cardElement = cardElement;
+  
   }
   selectCard(){
     // Update the style of this.cardElement to display = "flex"
-    this.cardElement;
+    this.cardElement.style.display = "flex";
+
+    
   }
 
 }
