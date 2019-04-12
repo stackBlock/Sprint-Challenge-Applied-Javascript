@@ -24,7 +24,7 @@ class TabLink {
     // this.cards = Array.from(this.cards).map();
 
     this.cards.forEach(function(card){
-      return new TabCard(card);
+      this.card = new TabCard(card);
     });
 
 
@@ -52,21 +52,29 @@ class TabLink {
 
     });
 
-/* ********************************************************* 66
+
 
     // Select all of the elements with the .card class on them
     const cards = document.querySelectorAll(`.card`);
 
+    
+
     // Iterate through the NodeList setting the display style each one to 'none'
-    cards.forEach()
+    cards.forEach(function(card){
+      card.style.display = "none";
+    })
+
+    
     
     // Add a class of ".active-tab" to this.tabElement
-    this.tabElement;
+    this.tabElement.classList.add(`active-tab`);
+
+   
   
     // Notice we are looping through the this.cards array and invoking selectCard() from the TabCard class. Just un-comment the code and study what is happening here.
     this.cards.forEach(card => card.selectCard());
 
-    ***************************************************************** 66 */
+    
   }
 
 
